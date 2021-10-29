@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-
-
-const MyorderDetails = (props) => {
-
+const ManageOrderDetails = (props) => {
 	const { productName, productimg, _id } = props.service;
 	const { handleDelete, id } = props;
 
@@ -28,5 +25,4 @@ const MyorderDetails = (props) => {
 		</div>
 	);
 };
-
-export default MyorderDetails;
+export default ManageOrderDetails;

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { useParams } from 'react-router';
 import React from 'react';
 import { useForm } from "react-hook-form";
 import './AddService.css';
@@ -12,8 +13,8 @@ const AddService = () => {
 		console.log("This is  data", data);
 		axios.post('https://morning-harbor-87181.herokuapp.com/services', data)
 			.then(res => {
-				if (res.data.insertId) {
-
+				// console.log("this is res from add service", res.data.inse);
+				if (res.data.insertedId) {
 					alert("added successfully");
 					reset();
 				}

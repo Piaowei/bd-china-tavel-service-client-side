@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import Service from '../Home/Service/Service';
+import ManageOrderDetails from '../ManageOrderDetails/ManageOrderDetails';
+
 
 const ManageAllOrders = () => {
-	const [services, setServices] = useState([]);
-
+	const [services, setServices] = useState([])
 	useEffect(() => {
-		fetch(`https://morning-harbor-87181.herokuapp.com/services/`)
+		fetch('https://morning-harbor-87181.herokuapp.com/orderItems')
 			.then(res => res.json())
-			.then(data => setServices(data))
+			.then(data => setServices(data));
 	}, [])
 
+
 	const handleDelete = id => {
-		const url = `https://morning-harbor-87181.herokuapp.com//services/${id}`;
+		console.log("worked", id);
+		const url = `https://morning-harbor-87181.herokuapp.com/orderItems/${id}`;
 		fetch(url, {
 			method: 'DELETE'
 		})
@@ -26,16 +28,19 @@ const ManageAllOrders = () => {
 			})
 	}
 
-	return (
-		<div>
-			<h1>Manage services</h1>
 
-			{
-				services.map(service => <div key={service._id} >
-					<h3>{service.name}</h3>
-					<button onClick={() => handleDelete(service._id)} >Delete</button>
-				</div>)
-			}
+	return (
+		<div >
+			<h2 className="text-primary mt-5">My  Orders Yeah</h2>
+			<div className="service-container">
+				{
+					services.map(service => <ManageOrderDetails
+						key={services._id}
+						service={service}
+						handleDelete={handleDelete}
+					></ManageOrderDetails>)
+				}
+			</div>
 		</div>
 	);
 };

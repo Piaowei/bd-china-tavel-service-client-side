@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import MyorderDetails from '../MyorderDetails/MyorderDetails';
-import './Myorders.css';
-const Myorders = () => {
+import useAuth from '../../hooks/useAuth';
 
+const Myorders = () => {
+	const { user } = useAuth();
 	const [services, setServices] = useState([])
 	useEffect(() => {
 		fetch('https://morning-harbor-87181.herokuapp.com/orderItems')
 			.then(res => res.json())
-			.then(data => setServices(data));
+			.then(data => {
+				const single = data.filter(item => item.email.toLowerCase() == user.email.toLowerCase());
+				console.log(single);
+				setServices(single);
+
+			});
 	}, [])
 
 
