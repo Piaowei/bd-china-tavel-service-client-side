@@ -1,0 +1,14 @@
+.add-sevice form {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.add-sevice form input, textarea {
+	width: 40%;
+	margin: 5px;
+	/* border-radius: 5px; */
+}
