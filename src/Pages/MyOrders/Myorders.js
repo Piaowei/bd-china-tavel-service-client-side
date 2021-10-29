@@ -5,7 +5,7 @@ const Myorders = () => {
 
 	const [services, setServices] = useState([])
 	useEffect(() => {
-		fetch('https://agile-bayou-71085.herokuapp.com/orderItems')
+		fetch('https://morning-harbor-87181.herokuapp.com/orderItems')
 			.then(res => res.json())
 			.then(data => setServices(data));
 	}, [])
@@ -13,7 +13,7 @@ const Myorders = () => {
 
 	const handleDelete = id => {
 		console.log("worked", id);
-		const url = `https://agile-bayou-71085.herokuapp.com/orderItems/${id}`;
+		const url = `https://morning-harbor-87181.herokuapp.com/orderItems/${id}`;
 		fetch(url, {
 			method: 'DELETE'
 		})

@@ -10,7 +10,7 @@ const AddService = () => {
 
 	const onSubmit = data => {
 		console.log("This is  data", data);
-		axios.post('https://agile-bayou-71085.herokuapp.com/services', data)
+		axios.post('https://morning-harbor-87181.herokuapp.com/services', data)
 			.then(res => {
 				if (res.data.insertId) {
 

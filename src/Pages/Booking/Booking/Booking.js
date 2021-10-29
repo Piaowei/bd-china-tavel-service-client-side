@@ -13,7 +13,7 @@ const Booking = () => {
 
 
     useEffect(() => {
-        fetch(`https://agile-bayou-71085.herokuapp.com/services/${serviceId}`)
+        fetch(`https://morning-harbor-87181.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data))
         // .then(data => console.log("data from details", data))
