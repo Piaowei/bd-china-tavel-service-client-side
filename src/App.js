@@ -10,7 +10,7 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import AddService from './Pages/addService/AddService';
 import Services from './Pages/Home/Services/Services';
 import Service from './Pages/Home/Service/Service';
-import ManageServices from './Pages/ManageServices/ManageServices';
+import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
 import Myorders from './Pages/MyOrders/Myorders';
 import MyorderDetails from './Pages/MyorderDetails/MyorderDetails';
 
@@ -44,18 +44,18 @@ function App() {
               <MyorderDetails></MyorderDetails>
             </Route>
 
-            <Route path="/addservice" >
+            <PrivateRoute path="/addservice" >
               <AddService></AddService>
-            </Route>
+            </PrivateRoute>
             <Route path="/services" >
               <Services></Services>
             </Route>
             <Route path="/service" >
               <Service></Service>
             </Route>
-            <Route path="/manageServices" >
-              <ManageServices></ManageServices>
-            </Route>
+            <PrivateRoute path="/manageAllOrders" >
+              <ManageAllOrders></ManageAllOrders>
+            </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>
             </Route>

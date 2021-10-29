@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Service from '../Home/Service/Service';
 
-const ManageServices = () => {
+const ManageAllOrders = () => {
 	const [services, setServices] = useState([]);
 
 	useEffect(() => {
@@ -40,4 +40,4 @@ const ManageServices = () => {
 	);
 };
 
-export default ManageServices;
+export default ManageAllOrders;

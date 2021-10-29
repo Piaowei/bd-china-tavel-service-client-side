@@ -25,7 +25,7 @@ const Booking = () => {
         data.productimg = service.img;
         console.log("opor theke", data);
         console.log("This is order sumbit info", data);
-        axios.post('http://localhost:5000/orderItems', data)
+        axios.post('https://morning-harbor-87181.herokuapp.com/orderItems', data)
             .then(res => {
                 console.log("this is res", res);
                 if (res.data.insertedId) {
