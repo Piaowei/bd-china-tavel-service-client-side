@@ -1,0 +1,22 @@
+.footer-text {
+	color: white;
+	font-weight: 500;
+	text-shadow: white;
+}
+
+.footer-text h6 {
+	color: white;
+	font-weight: 700;
+	text-shadow: white;
+}
+
+.footer-bg {
+	/* background-image: url(../../images/img/footer-bg.jpg); */
+	background-color: #2d3e52
+}
+
+.copyright {
+	background: black;
+	margin-bottom: 0px;
+	padding: 8px;
+}

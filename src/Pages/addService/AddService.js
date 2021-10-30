@@ -7,7 +7,7 @@ import './AddService.css';
 
 
 const AddService = () => {
-	const { register, handleSubmit, reset } = useForm();
+	const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
 	const onSubmit = data => {
 		console.log("This is  data", data);
@@ -24,9 +24,12 @@ const AddService = () => {
 		<div className="add-sevice" >
 			<h2>Add a service</h2>
 			<form onSubmit={handleSubmit(onSubmit)}>
-				<input {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
-				<textarea {...register("description")} placeholder="Description" />
-				<input type="number" {...register("price")} placeholder="Price" />
+				<input {...register("name", { required: true })} placeholder="Service name" />
+				{errors.name?.type === 'required' && <span className="text-danger">Service name is required</span>}
+				<textarea {...register("description", { required: true })} placeholder="Description" />
+				{errors.description && <span className="text-danger">Description is required</span>}
+				<input type="number" {...register("price", { required: true })} placeholder="Price" />
+				{errors.price && <span className="text-danger">price is required is required</span>}
 				<input {...register("img")} placeholder="Image URL" />
 				<input type="submit" />
 			</form>

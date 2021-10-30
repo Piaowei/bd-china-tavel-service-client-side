@@ -13,6 +13,7 @@ import Service from './Pages/Home/Service/Service';
 import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
 import Myorders from './Pages/MyOrders/Myorders';
 import MyorderDetails from './Pages/MyorderDetails/MyorderDetails';
+import Footer from './Pages/Shared/Footer/Footer';
 
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>

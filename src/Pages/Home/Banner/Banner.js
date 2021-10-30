@@ -11,7 +11,7 @@ const Banner = () => {
 
                 <Carousel.Item>
                     <div class="card bg-dark text-white  border-0 rounded-0">
-                        <img src={banner1} className="card-img border-0" alt="..." />
+                        <img src={banner3} className="card-img border-0" alt="..." />
                         <div class="card-img-overlay d-flex justify-content-center align-items-center  border-0">
                             <h1 className="card-title text-center ">Card title</h1>
 
@@ -31,7 +31,7 @@ const Banner = () => {
 
                 <Carousel.Item>
                     <div class="card bg-dark text-white  border-0 rounded-0">
-                        <img src={banner3} className="card-img border-0" alt="..." />
+                        <img src={banner1} className="card-img border-0" alt="..." />
                         <div class="card-img-overlay d-flex justify-content-center align-items-center  border-0">
                             <h1 className="card-title text-center ">Card title</h1>
 
