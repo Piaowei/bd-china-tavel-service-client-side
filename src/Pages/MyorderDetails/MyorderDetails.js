@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 const MyorderDetails = (props) => {
 
-	const { productName, productimg, _id } = props.service;
+	const { productName, productimg, _id, productStatus } = props.service;
 	const { handleDelete, id } = props;
 
 
@@ -20,6 +20,9 @@ const MyorderDetails = (props) => {
 						<div className="card-body">
 							<h5 className="card-title">{productName}</h5>
 							<p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							<div>
+								<h6>{productStatus}</h6>
+							</div>
 							<button className="btn btn-danger" onClick={() => handleDelete(_id)} >Delete</button>
 						</div>
 					</div>
