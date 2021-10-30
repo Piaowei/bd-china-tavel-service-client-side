@@ -1,14 +1,17 @@
 import React from 'react';
+
 import Banner from '../Banner/Banner';
-import Experts from '../Experts/Experts';
 import Services from '../Services/Services';
+import Accordion from '../Accordion/Accordion';
+import Destination from '../Destination/Destination';
 
 const Home = () => {
     return (
         <div id="home">
             <Banner></Banner>
             <Services></Services>
-            <Experts></Experts>
+            <Accordion></Accordion>
+            <Destination></Destination>
         </div>
     );
 };

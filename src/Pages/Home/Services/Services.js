@@ -8,6 +8,7 @@ const Services = () => {
         fetch('https://morning-harbor-87181.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data));
+
     }, [])
 
     return (
@@ -18,6 +19,7 @@ const Services = () => {
                     services.map(service => <Service
                         key={service.id}
                         service={service}
+                        short={service.description.slice(0.15)}
                     ></Service>)
                 }
             </div>

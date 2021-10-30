@@ -2,9 +2,14 @@ import React from 'react';
 import './Service.css';
 import { Link } from 'react-router-dom';
 
-const Service = ({ service }) => {
+const Service = (props) => {
     // const {service} = props;
-    const { _id, name, price, description, img } = service;
+    const { _id, name, price, description, img } = props.service;
+
+    // const short = des;
+
+
+
     return (
 
         <div class="row g-0">
@@ -15,7 +20,11 @@ const Service = ({ service }) => {
                 <div class="card-body">
                     <h5 class="card-title">{name}</h5>
                     <h5>Price: {price}</h5>
-                    <p className="px-3">{description}</p>
+                    <p className="px-3 text-start">
+                        {
+                            description.slice(0, 250)
+                        }.......
+                    </p>
 
                     <Link to={`/booking/${_id}`}>
                         {/* <button className="btn btn-warning">Book {name.toLowerCase()}</button> */}
