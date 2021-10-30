@@ -23,6 +23,7 @@ const Booking = () => {
         // const jinis = { service, data }
         data.productName = service.name;
         data.productimg = service.img;
+        data.productStatus = "Pending";
         console.log("opor theke", data);
         console.log("This is order sumbit info", data);
         axios.post('https://morning-harbor-87181.herokuapp.com/orderItems', data)
