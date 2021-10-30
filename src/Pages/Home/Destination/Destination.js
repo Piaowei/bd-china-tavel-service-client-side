@@ -10,55 +10,72 @@ import img7 from '../../../images/destination/chong.jpg'
 import img8 from '../../../images/destination/zhuhai.jpg'
 const Destination = () => {
 	return (
-		<div>
-			<div class="row row-cols-1 row-cols-md-4 g-4">
-				<div class="col">
-					<div class="card">
-						<img src={img1} class="card-img-top" alt="..." />
+		<div className="container-fluid">
+			<h1 className="my-3">Popular Destinations</h1>
+			<div className="row row-cols-1 row-cols-md-4 g-4">
+
+				<div className="col ">
+					<div className="card bg-white border-0 text-white">
+						<img src={img1} className="card-img-top" alt="..." />
+						<div className="card-img-overlay">
+							<h3 className="card-title">GuangZhou</h3>
+						</div>
 					</div>
 				</div>
-
-				<div class="col">
-					<div class="card">
-						<img src={img2} class="card-img-top" alt="..." />
+				<div className="col ">
+					<div className="card bg-white border-0 text-white">
+						<img src={img2} className="card-img-top" alt="..." />
+						<div className="card-img-overlay">
+							<h3 className="card-title">Hangzhou</h3>
+						</div>
 					</div>
 				</div>
-
-				<div class="col">
-					<div class="card">
-						<img src={img3} class="card-img-top" alt="..." />
+				<div className="col ">
+					<div className="card bg-white border-0 text-white">
+						<img src={img3} className="card-img-top" alt="..." />
+						<div className="card-img-overlay">
+							<h3 className="card-title">Hualien</h3>
+						</div>
 					</div>
 				</div>
-
-
-				<div class="col">
-					<div class="card">
-						<img src={img4} class="card-img-top" alt="..." />
-
+				<div className="col ">
+					<div className="card bg-white border-0 text-white">
+						<img src={img4} className="card-img-top" alt="..." />
+						<div className="card-img-overlay">
+							<h3 className="card-title">Manthou</h3>
+						</div>
 					</div>
 				</div>
-				<div class="col">
-					<div class="card">
-						<img src={img5} class="card-img-top" alt="..." />
-
+				<div className="col ">
+					<div className="card bg-white border-0 text-white">
+						<img src={img5} className="card-img-top" alt="..." />
+						<div className="card-img-overlay">
+							<h3 className="card-title">Macau</h3>
+						</div>
 					</div>
 				</div>
-				<div class="col">
-					<div class="card">
-						<img src={img6} class="card-img-top" alt="..." />
-
+				<div className="col ">
+					<div className="card bg-white border-0 text-white">
+						<img src={img6} className="card-img-top" alt="..." />
+						<div className="card-img-overlay">
+							<h3 className="card-title">Qindao</h3>
+						</div>
 					</div>
 				</div>
-				<div class="col">
-					<div class="card">
-						<img src={img7} class="card-img-top" alt="..." />
-
+				<div className="col ">
+					<div className="card bg-white border-0 text-white">
+						<img src={img7} className="card-img-top" alt="..." />
+						<div className="card-img-overlay">
+							<h3 className="card-title">Chongching</h3>
+						</div>
 					</div>
 				</div>
-				<div class="col">
-					<div class="card">
-						<img src={img8} class="card-img-top" alt="..." />
-
+				<div className="col ">
+					<div className="card bg-white border-0 text-white">
+						<img src={img8} className="card-img-top" alt="..." />
+						<div className="card-img-overlay">
+							<h3 className="card-title">Zhuhai</h3>
+						</div>
 					</div>
 				</div>
 			</div>

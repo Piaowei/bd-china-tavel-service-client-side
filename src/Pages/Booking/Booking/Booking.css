@@ -1,5 +1,5 @@
 .shipping-form {
-	margin: 30px 150px;
+	/* margin: 30px 150px; */
 }
 
 .shipping-form input {
@@ -13,4 +13,22 @@
 
 .error {
 	color: red;
+}
+
+.form-class {
+	margin-left: 25px;
+}
+
+.submit-btn {
+	background-color: orangered;
+	color: white;
+}
+
+.info-bg {
+	background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+}
+
+.price-bg {
+	/* background-color: rgb(203, 231, 255); */
+	background-image: linear-gradient(to right, #ff9966, #ff5e62);
 }
