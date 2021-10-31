@@ -62,9 +62,9 @@ const ManageAllOrders = () => {
 
 
 	return (
-		<div >
+		<div className="mb-5" >
 			<h2 className="text-primary mt-5">Manage All Users </h2>
-			<div className="service-container">
+			<div className="service-container ">
 				{
 					services.map(service => <ManageOrderDetails
 						key={services._id}

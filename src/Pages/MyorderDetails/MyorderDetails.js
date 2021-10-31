@@ -10,26 +10,43 @@ const MyorderDetails = (props) => {
 
 
 	return (
-		<div>
-			<div className="card mb-3" >
-				<div className="row g-0">
-					<div className="col-md-4">
-						<img src={productimg} className="img-fluid rounded-start" alt="Product Image" />
-					</div>
-					<div className="col-md-8">
-						<div className="card-body">
-							<h5 className="card-title">{productName}</h5>
-							<p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							<div>
-								<h6>{productStatus}</h6>
-							</div>
-							<button className="btn btn-danger" onClick={() => handleDelete(_id)} >Delete</button>
-						</div>
-					</div>
+
+
+		<div class="col ">
+			<div class="card h-100 carts-item">
+				<img src={productimg} className="img-fluid  card-img-top" alt="..." />
+				<div className="card-body m-0">
+					<h5 class="card-title">{productName}</h5>
+					<h6 className="text-danger" >{productStatus}</h6>
+					<button className="btn btn-danger" onClick={() => handleDelete(_id)} >Delete</button>
 				</div>
 			</div>
 		</div>
+
+
+
+
 	);
 };
 
 export default MyorderDetails;
+
+{/* <div>
+<div className="card mb-3" >
+	<div className="row g-0">
+		<div className="col-md-4">
+			<img src={productimg} className="img-fluid rounded-start" alt="Product Image" />
+		</div>
+		<div className="col-md-8">
+			<div className="card-body">
+				<h5 className="card-title">{productName}</h5>
+				<p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				<div>
+					<h6>{productStatus}</h6>
+				</div>
+				<button className="btn btn-danger" onClick={() => handleDelete(_id)} >Delete</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div> */}

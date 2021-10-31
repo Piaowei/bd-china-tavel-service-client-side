@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import './ManageOrderDetails.css'
 const ManageOrderDetails = (props) => {
-	const { productName, productimg, _id, productStatus, email } = props.service;
+	const { productName, productimg, _id, productStatus, email, name } = props.service;
 	const { handleDelete, id } = props;
 	const { handleUpdateUser } = props;
 
@@ -9,19 +10,24 @@ const ManageOrderDetails = (props) => {
 
 	return (
 		<div>
-			<div className="card mb-3" >
+			<div className="card mb-3 container-fluid no-margin carts-pub " >
 				<div className="row g-0">
-					<div className="col-md-4">
+					<div className="col-md-4 d-flex">
 						<img src={productimg} className="img-fluid rounded-start" alt="Product Image" />
 					</div>
 					<div className="col-md-8">
-						<div className="card-body">
+						<div className="card-body ">
 							<h5 className="card-title">{productName}</h5>
 							<br />
-							<div className="d-flex justify-content-between">
-								<h6>Order Status: <span className="text-danger fw-bold" >{productStatus}</span> </h6>
-								<p>User Email: <span className="text-primary fw-bold" >{email}</span> </p>
+							<div className="d-flex justify-content-between justify-content-center">
+								<p>Order Status: <span className="text-danger fw-bold" >{productStatus}</span> </p>
+								<div>
+									<p>User Email: <span className="text-primary fw-bold" >{email}</span> </p>
+									<p>User Name: <span className="text-primary fw-bold" >{name}</span> </p>
+
+								</div>
 							</div>
+
 							<div className="d-flex justify-content-md-start justify-content-between ">
 								<button className="btn btn-danger me-3" onClick={() => handleDelete(_id)} >Delete</button>
 								<button className="btn btn-primary" onClick={() => handleUpdateUser(_id)} >Approve Order</button>

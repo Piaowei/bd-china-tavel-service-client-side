@@ -15,17 +15,17 @@ const Services = () => {
         <div className="container-fluid">
             <h1 className="text-primary mt-5 pb-2 title ">Our services</h1>
 
-            <div className="col" >
-                <div className="card  container-fluid border-0 g-md-3  cart-img ">
-                    {
-                        services.map(service => <Service
-                            key={service.id}
-                            service={service}
-                            short={service.description.slice(0.15)}
-                        ></Service>)
-                    }
-                </div>
+            {/* <div className="col" > */}
+            <div className=" service-container ">
+                {
+                    services.map(service => <Service
+                        key={service.id}
+                        service={service}
+                        short={service.description.slice(0.15)}
+                    ></Service>)
+                }
             </div>
+            {/* </div> */}
 
 
         </div>
