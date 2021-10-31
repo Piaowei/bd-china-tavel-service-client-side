@@ -45,7 +45,7 @@ const Header = () => {
 
                                 <p className="nav-link active fs-6 fw-bolder hover-link text-warning " onClick={logOut}>Logout</p> :
 
-                                <NavLink className="nav-link active fs-6 fw-bolder hover-link " aria-current="page" to="/login">Login</NavLink>}
+                                <Nav.Link as={HashLink} className="nav-link active fs-6 fw-bolder hover-link " aria-current="page" to="/login#login">Login</Nav.Link>}
 
                             <p className="nav-link active fs-9 fw-bolder hover-link">
                                 <small>Signed in as: {user?.displayName}</small>

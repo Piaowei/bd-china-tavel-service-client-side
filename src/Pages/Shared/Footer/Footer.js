@@ -48,7 +48,7 @@ const Footer = () => {
 							<input type="text" className="form-control" placeholder="Inter Email" aria-label="Recipient's username" aria-describedby="button-addon2" />
 							<button className="btn btn-outline-secondary" type="button" id="button-addon2"><HiCursorClick /></button>
 						</div>
-						<div className="d-flex align-items-start justify-content-between">
+						<div className="d-flex align-items-start justify-content-md-between justify-content-evenly ">
 							<h4><IoLogoWechat size="1.5em" /></h4>
 							<h4><BsFacebook size="1.5em" /></h4>
 							<h4><BsTwitter size="1.5em" /></h4>

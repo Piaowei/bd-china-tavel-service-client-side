@@ -22,11 +22,15 @@ const Login = () => {
 
 
     return (
-        <div className="py-5">
-            <h4>Please Login/Google Sign in</h4>
-            <button onClick={handleGoogleSignIn} className="btn google "><FcGoogle size="2em" /></button>
 
+        <div id="login" className="my-5">
+            <div id="login" className="my-5 ">
+                <h4>Please Login/Google Sign in</h4>
+                <button onClick={handleGoogleSignIn} className="btn google "><FcGoogle size="2em" /></button>
+
+            </div>
         </div>
+
     );
 };
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import './Service.css';
-import { Link } from 'react-router-dom';
+import { Nav } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Service = (props) => {
     // const {service} = props;
@@ -26,11 +28,11 @@ const Service = (props) => {
                                 }.......
                             </p>
 
-                            <div className="d-flex justify-content-between">
-                                <h5 className="price" >Price Starts from: <span className="text-black" >&yen;{price}</span> </h5>
-                                <Link to={`/booking/${_id}`}>
-                                    <button className="btn btn-danger button ">Book </button>
-                                </Link>
+                            <div className="d-flex justify-content-between align-items-center">
+                                <h5 className="price" >Price Starts at: <span className="text-black" >&yen;{price}</span> </h5>
+                                <Nav.Link as={HashLink} to={`/booking/${_id}#booking`}>
+                                    <button className="btn btn-danger button ">Book Now </button>
+                                </Nav.Link>
                             </div>
 
 
