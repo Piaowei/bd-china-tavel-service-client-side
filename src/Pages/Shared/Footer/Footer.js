@@ -11,7 +11,7 @@ const Footer = () => {
 				<div className="row row-cols-1 row-cols-md-4 g-4">
 
 
-					<div className="col text-start  footer-text-bd">
+					<div className="col  text-md-start footer-text-bd text-center">
 						<h4 className="mb-md-4" >Get In Touch</h4>
 						<p>28-Nanli Road,Hongshan District,Wuhan,China</p>
 						<p>Call For More Information
@@ -20,7 +20,7 @@ const Footer = () => {
 							msptonmoy@gmail.com</p>
 					</div>
 
-					<div className="col text-start footer-text-bd">
+					<div className="col text-center footer-text-bd  text-md-start">
 						<h4 className="mb-md-4">About</h4>
 						<p>About Bd China Travel service</p>
 						<p>News</p>
@@ -30,7 +30,7 @@ const Footer = () => {
 					</div>
 
 
-					<div className="col text-start footer-text-bd">
+					<div className="col text-center footer-text-bd text-md-start">
 						<h4 className="mb-md-4" >Other Services</h4>
 						<p><span className="ms-2 text-white" >Investor Relations</span> </p>
 						<p> <span className="ps-2" >Bd-China Rewards</span> </p>
@@ -38,7 +38,7 @@ const Footer = () => {
 						<p> <span className="ps-2" >List My Hotel</span> </p>
 						<p> <span className="ps-2" >Become a Tours & Tickets Vendor</span> </p>
 					</div>
-					<div className="col text-start footer-text-bd">
+					<div className="col text-center footer-text-bd  text-md-start">
 						<h4 className="mb-md-4">Follow Us</h4>
 						<p> Bd China Travel Service Center, <br />28-Nanli Road,Hongshan District,<br /> Wuhan,China</p>
 

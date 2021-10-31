@@ -12,11 +12,11 @@ const MyorderDetails = (props) => {
 	return (
 
 
-		<div class="col ">
-			<div class="card h-100 carts-item">
+		<div className="col ">
+			<div className="card h-100 carts-item">
 				<img src={productimg} className="img-fluid  card-img-top" alt="..." />
 				<div className="card-body m-0">
-					<h5 class="card-title">{productName}</h5>
+					<h5 className="card-title">{productName}</h5>
 					<h6 className="text-danger" >{productStatus}</h6>
 					<button className="btn btn-danger" onClick={() => handleDelete(_id)} >Delete</button>
 				</div>

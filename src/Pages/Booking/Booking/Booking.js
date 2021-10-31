@@ -57,6 +57,9 @@ const Booking = () => {
                         <div className="price-bg" >
                             <h5  >Price Starts from: <span className="text-white" >&yen;{service.price}</span> </h5>
                         </div>
+                        <div className="price-bg" >
+                            <h5  >Travel Duration: <span className="text-white" >{service.time}</span>Hours </h5>
+                        </div>
                     </div>
                 </div>
 
