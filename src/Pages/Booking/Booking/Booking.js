@@ -17,11 +17,9 @@ const Booking = () => {
         fetch(`https://morning-harbor-87181.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data))
-        // .then(data => console.log("data from details", data))
     }, [])
 
     const onSubmit = data => {
-        // const jinis = { service, data }
         data.productName = service.name;
         data.productimg = service.img;
         data.productStatus = "Pending";
@@ -37,8 +35,6 @@ const Booking = () => {
                 }
             })
     };
-
-
 
 
 
@@ -58,7 +54,7 @@ const Booking = () => {
                             <h5  >Price Starts from: <span className="text-white" >&yen;{service.price}</span> </h5>
                         </div>
                         <div className="price-bg" >
-                            <h5  >Travel Duration: <span className="text-white" >{service.time}</span>Hours </h5>
+                            <h5  >Travel Duration: <span className="text-white" >{service.time}</span> Hours </h5>
                         </div>
                     </div>
                 </div>
@@ -91,16 +87,7 @@ const Booking = () => {
 
                     </div>
                 </div>
-
-
             </div>
-
-
-
-
-
-
-
         </div>
     );
 };

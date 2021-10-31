@@ -2,7 +2,9 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import img from '../../../images/Daco_159503.png'
+import { HashLink } from 'react-router-hash-link';
 import "./HeaderItem.css"
+import { Nav } from 'react-bootstrap';
 
 
 
@@ -21,26 +23,25 @@ const Header = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        {/* <a className="navbar-brand" href="#">Sunrise Eye Care</a> */}
+
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item hover-link ">
-                                <NavLink className="nav-link active fw-bolder hover-link text-color hover-link text-white" aria-current="page" to="/home">Home</NavLink>
+                                <Nav.Link as={HashLink} className="nav-link active fw-bolder hover-link text-color hover-link text-white" aria-current="page" to="/home#home">Home</Nav.Link>
                             </li>
                             <li className="nav-item hover-link">
-                                <NavLink className="nav-link active  fw-bolder hover-link text-color hover-link text-white" aria-current="page" to="/manageAllOrders">Manage Orders</NavLink>
+                                <Nav.Link as={HashLink} className="nav-link active  fw-bolder hover-link text-color hover-link text-white" aria-current="page" to="/manageAllOrders#manageAllOrders">Manage Orders</Nav.Link>
                             </li>
                             <li className="nav-item hover-link">
-                                <NavLink className="nav-link active  fw-bolder hover-link text-color  hover-link text-white" aria-current="page" to="/myOrders"> My Orders</NavLink>
+                                <Nav.Link as={HashLink} className="nav-link active  fw-bolder hover-link text-color  hover-link text-white" aria-current="page" to="/myOrders#myOrder"> My Orders</Nav.Link>
                             </li>
                             <li className="nav-item hover-link">
-                                <NavLink className="nav-link active fw-bolder hover-link text-color hover-link text-white" aria-current="page" to="/addservice">Add a New Service</NavLink>
+                                <Nav.Link as={HashLink} className="nav-link active fw-bolder hover-link text-color hover-link text-white" aria-current="page" to="/addservice#addService">Add a New Service</Nav.Link>
                             </li>
 
                         </ul>
                         <form className="d-flex justify-content-center pt-3">
 
                             {user?.email ?
-                                // <Nav.Link as={Link} to="/login">Login</Nav.Link> :
 
                                 <p className="nav-link active fs-6 fw-bolder hover-link text-warning " onClick={logOut}>Logout</p> :
 

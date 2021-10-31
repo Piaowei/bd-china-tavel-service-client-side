@@ -26,10 +26,14 @@ const Service = (props) => {
                                 }.......
                             </p>
 
-                            <Link to={`/booking/${_id}`}>
-                                {/* <button className="btn btn-warning">Book {name.toLowerCase()}</button> */}
-                                <button className="btn btn-danger">Book </button>
-                            </Link>
+                            <div className="d-flex justify-content-between">
+                                <h5 className="price" >Price Starts from: <span className="text-black" >&yen;{price}</span> </h5>
+                                <Link to={`/booking/${_id}`}>
+                                    <button className="btn btn-danger button ">Book </button>
+                                </Link>
+                            </div>
+
+
 
                         </div>
                     </div>
@@ -37,21 +41,6 @@ const Service = (props) => {
             </div>
         </div>
 
-
-
-
-
-
-
-        // <div className="service pb-3">
-        //     <img src={img} alt="" />
-        //     <h3>{name}</h3>
-        //     <h5>Price: {price}</h5>
-        //     <p className="px-3">{description}</p>
-        //     <Link to={`/booking/${_id}`}>
-        //         <button className="btn btn-warning">Book {name.toLowerCase()}</button>
-        //     </Link>
-        // </div>
     );
 };
 

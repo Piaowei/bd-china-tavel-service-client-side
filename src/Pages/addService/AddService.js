@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { useParams } from 'react-router';
 import React from 'react';
 import { useForm } from "react-hook-form";
 import './AddService.css';
@@ -14,31 +13,30 @@ const AddService = () => {
 		console.log("This is  data", data);
 		axios.post('https://morning-harbor-87181.herokuapp.com/services', data)
 			.then(res => {
-				// console.log("this is res from add service", res.data.inse);
 				if (res.data.insertedId) {
 					alert("added successfully");
 					reset();
 				}
 			})
 	};
+
 	return (
-		<div className="add-sevice" >
+		<div id="addService" className="add-sevice" >
 			<div className="service-container" >
 				<div className="card mb-3 container-fluid no-margin carts">
 					<div className="row g-0 ">
 						<div className="col col-12 ">
 							<div className="card h-100 carts-item">
 								<img src={hotel} className="img-fluid  card-img-top" alt="..." />
-
 							</div>
 						</div>
 					</div>
 				</div>
-
-
 			</div>
 
-
+			{/* -------------------------------------------------
+                   ADD NEW SERVICE
+-----------------------------------------------------*/}
 
 			<h1>Add a service</h1>
 			<form onSubmit={handleSubmit(onSubmit)}>

@@ -32,7 +32,6 @@ const ManageAllOrders = () => {
 
 
 	//UPDATE API
-
 	const handleUpdateUser = e => {
 		setProductStatus(true)
 		const appove = { condition: "Approved" };
@@ -52,9 +51,6 @@ const ManageAllOrders = () => {
 					setProductStatus("");
 				}
 			})
-
-
-		// e.preventDefault();
 	}
 
 
@@ -62,7 +58,7 @@ const ManageAllOrders = () => {
 
 
 	return (
-		<div className="mb-5" >
+		<div id="manageAllOrders" className="mb-5" >
 			<h2 className="text-primary mt-5">Manage All Users </h2>
 			<div className="service-container ">
 				{

@@ -1,7 +1,3 @@
-/* body {
-	background-color: rgb(42, 26, 85);
-} */
-
 .myOrder-bg {
 	background-color: rgb(42, 26, 85);
 }
@@ -13,7 +9,6 @@
 .carts-item {
 	box-shadow: 7px 7px 15px #c666d3;
 	border: none;
-	/* background-image: url(../Header/images/gra-2.jpg); */
 }
 
 .carts-item:hover {

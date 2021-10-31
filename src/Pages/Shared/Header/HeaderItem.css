@@ -6,7 +6,6 @@
 }
 
 .hover-link:hover {
-	/* color: #f75002; */
 	background-color: red;
 	font-style: italic;
 	border-radius: 5px;

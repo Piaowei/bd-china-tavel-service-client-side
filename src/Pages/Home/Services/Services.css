@@ -1,7 +1,6 @@
 .carts {
 	box-shadow: 10px 10px 20px #97a7ff;
 	border: none;
-	/* background-image: url(../Header/images/gra-2.jpg); */
 }
 
 .carts:hover {
@@ -14,8 +13,6 @@
 .no-margin {
 	margin-top: 0px;
 	margin-left: 0;
-	/* margin-bottom: 4px; */
-	/* padding-top: 0; */
 	padding-left: 0;
 }
 

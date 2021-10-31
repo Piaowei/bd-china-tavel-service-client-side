@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Permanent+Marker&display=swap');
-.banner-text h1 {
-	/* font-family: 'Merienda', cursive; */
-	/* font-family: 'Permanent Marker', cursive; */
-}
-
 .carts-home {
 	box-shadow: 10px 10px 20px #ffb18d;
 	border: none;
-	/* background-image: url(../Header/images/gra-2.jpg); */
 }
 
 .carts-home:hover {

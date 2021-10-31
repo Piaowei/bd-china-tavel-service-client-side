@@ -1,7 +1,3 @@
-.shipping-form {
-	/* margin: 30px 150px; */
-}
-
 .shipping-form input {
 	display: block;
 	margin-top: 30px;
@@ -29,10 +25,5 @@
 }
 
 .price-bg {
-	/* background-color: rgb(203, 231, 255); */
 	background-image: linear-gradient(to right, #ff9966, #ff5e62);
-}
-
-.full-body {
-	/* background-color: rgb(240, 240, 241); */
 }

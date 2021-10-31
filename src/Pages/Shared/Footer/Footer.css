@@ -1,6 +1,5 @@
 .footer-text-bd {
 	color: white;
-	/* font-weight: 200; */
 	text-shadow: white;
 }
 
@@ -17,7 +16,6 @@
 }
 
 .footer-bg {
-	/* background-image: url(../../images/img/footer-bg.jpg); */
 	background-color: #2d3e52
 }
 

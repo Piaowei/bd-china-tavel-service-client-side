@@ -15,7 +15,7 @@ const Services = () => {
         <div className="container-fluid">
             <h1 className="text-primary mt-5 pb-2 title ">Our services</h1>
 
-            {/* <div className="col" > */}
+
             <div className=" service-container ">
                 {
                     services.map(service => <Service
@@ -25,7 +25,7 @@ const Services = () => {
                     ></Service>)
                 }
             </div>
-            {/* </div> */}
+
 
 
         </div>
