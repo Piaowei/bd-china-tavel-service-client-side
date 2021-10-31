@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 const ManageOrderDetails = (props) => {
-	const { productName, productimg, _id, productStatus } = props.service;
+	const { productName, productimg, _id, productStatus, email } = props.service;
 	const { handleDelete, id } = props;
 	const { handleUpdateUser } = props;
 
@@ -17,12 +17,16 @@ const ManageOrderDetails = (props) => {
 					<div className="col-md-8">
 						<div className="card-body">
 							<h5 className="card-title">{productName}</h5>
-							<p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							<div>
-								<h6>{productStatus}</h6>
+							<br />
+							<div className="d-flex justify-content-between">
+								<h6>Order Status: <span className="text-danger fw-bold" >{productStatus}</span> </h6>
+								<p>User Email: <span className="text-primary fw-bold" >{email}</span> </p>
 							</div>
-							<button className="btn btn-danger" onClick={() => handleDelete(_id)} >Delete</button>
-							<button className="btn btn-primary" onClick={() => handleUpdateUser(_id)} >Approve Order</button>
+							<div className="d-flex justify-content-md-start justify-content-between ">
+								<button className="btn btn-danger me-3" onClick={() => handleDelete(_id)} >Delete</button>
+								<button className="btn btn-primary" onClick={() => handleUpdateUser(_id)} >Approve Order</button>
+							</div>
+
 						</div>
 					</div>
 				</div>

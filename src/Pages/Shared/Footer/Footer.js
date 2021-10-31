@@ -11,8 +11,8 @@ const Footer = () => {
 				<div className="row row-cols-1 row-cols-md-4 g-4">
 
 
-					<div className="col text-start  footer-text">
-						<h5>Get In Touch</h5>
+					<div className="col text-start  footer-text-bd">
+						<h4 className="mb-md-4" >Get In Touch</h4>
 						<p>28-Nanli Road,Hongshan District,Wuhan,China</p>
 						<p>Call For More Information
 							+8801842403974</p>
@@ -20,25 +20,27 @@ const Footer = () => {
 							msptonmoy@gmail.com</p>
 					</div>
 
-					<div className="col text-start footer-text">
-						<h5>About</h5>
-						<p>Doctor</p>
-						<p>Time Schedule</p>
-						<p>Services</p>
-						<p>Departments</p>
-						<p>Contact</p>
+					<div className="col text-start footer-text-bd">
+						<h4 className="mb-md-4">About</h4>
+						<p>About Bd China Travel service</p>
+						<p>News</p>
+						<p>Careers</p>
+						<p>Terms & Conditions</p>
+						<p>Privacy Statement</p>
 					</div>
-					<div className="col text-start footer-text">
-						<h5>Opening Hours</h5>
-						<p>Sun: <span className="ms-2" >09:00 AM - 09:00 PM</span> </p>
-						<p>Mon: <span className="ps-2" >09:00 AM - 09:00 PM</span> </p>
-						<p>Tue: <span className="ps-2" >09:00 AM - 09:00 PM</span> </p>
-						<p>Wed: <span className="ps-2" >09:00 AM - 09:00 PM</span> </p>
-						<p>Thu: <span className="ps-2" >09:00 AM - 09:00 PM</span> </p>
+
+
+					<div className="col text-start footer-text-bd">
+						<h4 className="mb-md-4" >Other Services</h4>
+						<p><span className="ms-2 text-white" >Investor Relations</span> </p>
+						<p> <span className="ps-2" >Bd-China Rewards</span> </p>
+						<p><span className="ps-2" >Affiliate Program</span> </p>
+						<p> <span className="ps-2" >List My Hotel</span> </p>
+						<p> <span className="ps-2" >Become a Tours & Tickets Vendor</span> </p>
 					</div>
-					<div className="col text-start footer-text">
-						<h5>Follow Us</h5>
-						<p> Sunrise Eye Care <br />28-Nanli Road,Hongshan District,Wuhan,China</p>
+					<div className="col text-start footer-text-bd">
+						<h4 className="mb-md-4">Follow Us</h4>
+						<p> Bd China Travel Service Center, <br />28-Nanli Road,Hongshan District,<br /> Wuhan,China</p>
 
 						{/* Used React Icons */}
 
@@ -47,16 +49,16 @@ const Footer = () => {
 							<button className="btn btn-outline-secondary" type="button" id="button-addon2"><HiCursorClick /></button>
 						</div>
 						<div className="d-flex align-items-start justify-content-between">
-							<h5><IoLogoWechat size="1.5em" /></h5>
-							<h5><BsFacebook size="1.5em" /></h5>
-							<h5><BsTwitter size="1.5em" /></h5>
-							<h5><FaWeibo size="1.5em" /></h5>
+							<h4><IoLogoWechat size="1.5em" /></h4>
+							<h4><BsFacebook size="1.5em" /></h4>
+							<h4><BsTwitter size="1.5em" /></h4>
+							<h4><FaWeibo size="1.5em" /></h4>
 						</div>
 					</div>
 				</div>
 
 			</div>
-			<p className="text-white copyright" >CopyRight  &copy; Sunrise Eye Care</p>
+			<p className="text-white copyright" >CopyRight  &copy; Bd China Travel Service</p>
 		</div>
 	);
 };

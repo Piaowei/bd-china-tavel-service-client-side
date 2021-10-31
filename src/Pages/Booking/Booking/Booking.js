@@ -43,7 +43,7 @@ const Booking = () => {
 
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid full-body">
             <h1 className="pt-3 pb-5">Place your order Now</h1>
 
             <div className="row row-cols-1 row-cols-md-2 g-4">
@@ -55,7 +55,7 @@ const Booking = () => {
                             <p className="card-text">{service.description}</p>
                         </div>
                         <div className="price-bg" >
-                            <h5  >Price Start from: <span className="text-white" >&yen;{service.price}</span> </h5>
+                            <h5  >Price Starts from: <span className="text-white" >&yen;{service.price}</span> </h5>
                         </div>
                     </div>
                 </div>
@@ -69,14 +69,20 @@ const Booking = () => {
                     <div className="card">
                         <form className="shipping-form  form-class " onSubmit={handleSubmit(onSubmit)}>
 
-                            <input className="ps-2" defaultValue={user.displayName} {...register("name")} />
+                            <input defaultValue={user.displayName} {...register("name", { required: true })} placeholder="Service Name" />
+                            {errors.name?.type === 'required' && <span className="text-danger"> User name is required</span>}
 
                             <input defaultValue={user.email} {...register("email", { required: true })} />
-                            {errors.email && <span className="error">This field is required</span>}
-                            <input placeholder="Address" defaultValue="" {...register("address")} />
-                            <input placeholder="City" defaultValue="" {...register("city")} />
-                            <input placeholder="phone number" defaultValue="" {...register("phone")} />
+                            {errors.email && <span className="text-danger">Email is required</span>}
 
+                            <input placeholder="Address" defaultValue="" {...register("address", { required: true })} />
+                            {errors.address && <span className="text-danger">Address is required</span>}
+
+                            <input type="number" placeholder="Bank Account Number"  {...register("bankAccount", { required: true })} />
+                            {errors.bankAccount && <span className="text-danger">Bank Account Number is  required</span>}
+
+                            <input placeholder="Phone number"  {...register("phone", { required: true })} />
+                            {errors.phone && <span className="text-danger">Phone Number is  required</span>}
                             <input className="submit-btn" type="submit" />
                         </form>
 

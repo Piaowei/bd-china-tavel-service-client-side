@@ -9,7 +9,11 @@ const Myorders = () => {
 		fetch('https://morning-harbor-87181.herokuapp.com/orderItems')
 			.then(res => res.json())
 			.then(data => {
-				const single = data.filter(item => item.email.toLowerCase() == user.email.toLowerCase());
+				// if (services.length == 0) {
+				// 	setServices(data);
+				// }
+
+				const single = data.filter(item => item.email.toLowerCase() == user?.email?.toLowerCase());
 				console.log(single);
 				setServices(single);
 
@@ -27,7 +31,7 @@ const Myorders = () => {
 			.then(data => {
 
 				if (data.deletedCount) {
-					alert('deleted');
+					window.alert("The Ordered Item is Deleted")
 					const remaining = services.filter(service => service._id !== id);
 					setServices(remaining);
 				}

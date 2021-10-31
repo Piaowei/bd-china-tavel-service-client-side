@@ -63,7 +63,7 @@ const ManageAllOrders = () => {
 
 	return (
 		<div >
-			<h2 className="text-primary mt-5">My  Orders Yeah</h2>
+			<h2 className="text-primary mt-5">Manage All Users </h2>
 			<div className="service-container">
 				{
 					services.map(service => <ManageOrderDetails

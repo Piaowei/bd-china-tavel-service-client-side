@@ -1,12 +1,18 @@
-.footer-text {
+.footer-text-bd {
 	color: white;
-	font-weight: 500;
+	/* font-weight: 200; */
 	text-shadow: white;
 }
 
-.footer-text h6 {
-	color: white;
+.footer-text-bd h4 {
+	color: #f75002;
 	font-weight: 700;
+	text-shadow: white;
+}
+
+.footer-text-bd p {
+	color: white;
+	font-weight: 250;
 	text-shadow: white;
 }
 

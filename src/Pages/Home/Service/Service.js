@@ -12,15 +12,14 @@ const Service = (props) => {
 
     return (
 
-        <div class="row g-0">
-            <div class="col-md-4">
+        <div class="row g-5 border-2 m-md-1 carts no-margin">
+            <div class="col-md-4 no-margin d-flex ">
                 <img src={img} class="img-fluid rounded-start" alt="..." />
             </div>
-            <div class="col-md-8">
-                <div class="card-body">
+            <div class="col-md-8 no-margin">
+                <div class="card-body ">
                     <h5 class="card-title">{name}</h5>
-                    <h5>Price: {price}</h5>
-                    <p className="px-3 text-start">
+                    <p className="px-3 text-start fs-6">
                         {
                             description.slice(0, 250)
                         }.......
@@ -28,7 +27,7 @@ const Service = (props) => {
 
                     <Link to={`/booking/${_id}`}>
                         {/* <button className="btn btn-warning">Book {name.toLowerCase()}</button> */}
-                        <button className="btn btn-warning">Book </button>
+                        <button className="btn btn-danger">Book </button>
                     </Link>
 
                 </div>

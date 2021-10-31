@@ -8,10 +8,11 @@ import img5 from '../../../images/destination/macau.jpg'
 import img6 from '../../../images/destination/qindao.jpg'
 import img7 from '../../../images/destination/chong.jpg'
 import img8 from '../../../images/destination/zhuhai.jpg'
+import './Destination.css'
 const Destination = () => {
 	return (
 		<div className="container-fluid">
-			<h1 className="my-3">Popular Destinations</h1>
+			<h1 className="my-3 title-color">Popular Destinations</h1>
 			<div className="row row-cols-1 row-cols-md-4 g-4">
 
 				<div className="col ">

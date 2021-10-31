@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import img from '../../../images/Daco_159503.png'
 import "./HeaderItem.css"
 
 
@@ -13,8 +14,8 @@ const Header = () => {
             <nav className="navbar navbar-expand-lg navbar-light bg-light nav-color ">
                 <div className="container-fluid nav-color">
                     <a className="navbar-brand " href="#">
-                        {/* <img src={img} alt="" width="30" height="24" className="d-inline-block align-text-top" /> */}
-                        <span className="ps-3 fw-bold " >Bd-China <br /> Travel Service</span>
+                        <img src={img} alt="" width="35" height="30" className="d-inline-block align-text-top" />
+                        <span className="ps-3 fw-bold " >Bd-China  Travel Service</span>
                     </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
