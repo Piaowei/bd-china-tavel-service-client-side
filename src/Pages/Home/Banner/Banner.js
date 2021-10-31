@@ -50,7 +50,6 @@ const Banner = () => {
             </Carousel>
             <br />
             <h3 className="top-rated pt-2 ">Search your Next Destination</h3>
-            <h6>WE TRAVEL NOT TO SCAPE LIFE,BUT FOR LIFE NOT TO ESCAPE US. OUR SERVICE INSURE YOU A SAFETY & SATISFID JOURNEY</h6>
             <div className="container-fluid pb-3 w-75 ">
                 <div className="input-group mb-3 carts-home ">
                     <input type="text" className="form-control" placeholder="Place Name" aria-label="Course Name" aria-describedby="button-addon2" />
