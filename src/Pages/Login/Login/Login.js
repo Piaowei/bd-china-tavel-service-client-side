@@ -11,7 +11,7 @@ const Login = () => {
     const auth = getAuth();
     const location = useLocation();
     const history = useHistory();
-    const redirect_uri = location.state?.from || '/home';
+    const redirect_uri = location.state?.from || '/home#home';
     const handleGoogleSignIn = () => {
         signInUsingGoogle()
             .then(result => {
@@ -23,8 +23,8 @@ const Login = () => {
 
     return (
 
-        <div id="login" className="my-5">
-            <div id="login" className="my-5 ">
+        <div id="nav-bar" className="my-5">
+            <div className="my-5 py-5 ">
                 <h4>Please Login/Google Sign in</h4>
                 <button onClick={handleGoogleSignIn} className="btn google "><FcGoogle size="2em" /></button>
 

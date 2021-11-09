@@ -1,27 +1,33 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import './AddService.css';
+import { Spinner } from 'react-bootstrap';
 import hotel from '../../images/hotel.jpg'
 
 
 
 const AddService = () => {
+	const [isFound, setIsFound] = useState(false);
 	const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
 	const onSubmit = data => {
+		setIsFound(true);
 		console.log("This is  data", data);
 		axios.post('https://morning-harbor-87181.herokuapp.com/services', data)
 			.then(res => {
 				if (res.data.insertedId) {
+					setIsFound(false);
 					alert("added successfully");
 					reset();
 				}
 			})
+
 	};
 
+
 	return (
-		<div id="addService" className="add-sevice" >
+		<div id="nav-bar" className="add-sevice" >
 			<div className="service-container" >
 				<div className="card mb-3 container-fluid no-margin carts">
 					<div className="row g-0 ">
@@ -37,6 +43,9 @@ const AddService = () => {
 			{/* -------------------------------------------------
                    ADD NEW SERVICE
 -----------------------------------------------------*/}
+			{
+				isFound && <Spinner animation="border" variant="danger" />
+			}
 
 			<h1>Add a service</h1>
 			<form onSubmit={handleSubmit(onSubmit)}>

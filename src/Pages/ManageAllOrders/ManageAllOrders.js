@@ -1,19 +1,28 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import ManageOrderDetails from '../ManageOrderDetails/ManageOrderDetails';
 
 
 const ManageAllOrders = () => {
+	const [isFound, setIsFound] = useState(true);
 	const [services, setServices] = useState([])
 	const [productStatus, setProductStatus] = useState(false);
 	useEffect(() => {
+		setIsFound(true);
 		fetch('https://morning-harbor-87181.herokuapp.com/orderItems')
 			.then(res => res.json())
-			.then(data => setServices(data));
+			.then(data => setServices(data))
+			.finally(() => setIsFound(false));
 	}, [productStatus])
 
 
-	const handleDelete = id => {
 
+	if (isFound) {
+		return <Spinner animation="border" variant="danger" />
+	}
+
+
+	const handleDelete = id => {
 		console.log("worked", id);
 		const url = `https://morning-harbor-87181.herokuapp.com/orderItems/${id}`;
 		fetch(url, {
@@ -58,12 +67,12 @@ const ManageAllOrders = () => {
 
 
 	return (
-		<div id="manageAllOrders" className="mb-5" >
-			<h2 className="text-primary mt-5">Manage All Users </h2>
+		<div id="nav-bar" className="mb-5" >
+			<h2 className="text-primary pt-3 pb-3">Manage All Users </h2>
 			<div className="service-container ">
 				{
 					services.map(service => <ManageOrderDetails
-						key={services._id}
+						key={service._id}
 						service={service}
 						handleDelete={handleDelete}
 						handleUpdateUser={handleUpdateUser}

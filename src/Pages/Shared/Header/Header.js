@@ -12,7 +12,7 @@ import { Nav } from 'react-bootstrap';
 const Header = () => {
     const { user, logOut } = useAuth();
     return (
-        <div className="sticky-top">
+        <div id="nav-bar" className="sticky-top">
             <nav className="navbar navbar-expand-lg navbar-light bg-light nav-color ">
                 <div className="container-fluid nav-color">
                     <a className="navbar-brand " href="#">
@@ -45,7 +45,7 @@ const Header = () => {
 
                                 <p className="nav-link active fs-6 fw-bolder hover-link text-warning " onClick={logOut}>Logout</p> :
 
-                                <Nav.Link as={HashLink} className="nav-link active fs-6 fw-bolder hover-link " aria-current="page" to="/login#login">Login</Nav.Link>}
+                                <Nav.Link as={HashLink} className="nav-link active fs-6 fw-bolder hover-link " aria-current="page" to="/login">Login</Nav.Link>}
 
                             <p className="nav-link active fs-9 fw-bolder hover-link">
                                 <small>Signed in as: {user?.displayName}</small>

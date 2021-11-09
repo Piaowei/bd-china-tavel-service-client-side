@@ -16,7 +16,7 @@ const Banner = () => {
                         <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center  border-0">
                             <h1 className="card-title text-center banner-text">To travel is to live</h1>
 
-                            <div> <h6>WE TRAVEL NOT TO SCAPE LIFE,BUT FOR LIFE NOT TO ESCAPE US. OUR SERVICE INSURE YOU A SAFETY & SATISFID JOURNEY</h6>
+                            <div> <h6>WE TRAVEL NOT TO SCAPE LIFE,BUT FOR LIFE NOT TO ESCAPE US. OUR SERVICE INSURE YOU A SAFETY & SATISFIED JOURNEY</h6>
                             </div>
                         </div>
                     </div>
@@ -28,7 +28,7 @@ const Banner = () => {
                         <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center  border-0">
                             <h1 className="card-title text-center banner-text ">Travel to the World</h1>
 
-                            <div> <h6>WE TRAVEL NOT TO SCAPE LIFE,BUT FOR LIFE NOT TO ESCAPE US. OUR SERVICE INSURE YOU A SAFETY & SATISFID JOURNEY</h6></div>
+                            <div> <h6>WE TRAVEL NOT TO SCAPE LIFE,BUT FOR LIFE NOT TO ESCAPE US. OUR SERVICE INSURE YOU A SAFETY & SATISFIED JOURNEY</h6></div>
 
                         </div>
                     </div>
@@ -40,7 +40,7 @@ const Banner = () => {
                         <div className="card-img-overlay d-flex justify-content-center align-items-center flex-column  border-0">
                             <h1 className="card-title text-center fs-1  banner-text ">Explore yourself in China</h1>
                             <div>
-                                <h6>WE TRAVEL NOT TO SCAPE LIFE,BUT FOR LIFE NOT TO ESCAPE US. OUR SERVICE INSURE YOU A SAFETY & SATISFID JOURNEY</h6>
+                                <h6>WE TRAVEL NOT TO SCAPE LIFE,BUT FOR LIFE NOT TO ESCAPE US. OUR SERVICE INSURE YOU A SAFETY & SATISFIED JOURNEY</h6>
                             </div>
 
                         </div>
