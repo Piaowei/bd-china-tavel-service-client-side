@@ -14,6 +14,8 @@ import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
 import Myorders from './Pages/MyOrders/Myorders';
 import MyorderDetails from './Pages/MyorderDetails/MyorderDetails';
 import Footer from './Pages/Shared/Footer/Footer';
+import Register from './Pages/Login/Register/Register';
+import MoreProducts from './Pages/MoreProducts/MoreProducts';
 
 
 function App() {
@@ -32,6 +34,9 @@ function App() {
             </Route>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/register">
+              <Register />
             </Route>
             <PrivateRoute path="/booking/:serviceId">
               <Booking></Booking>
@@ -54,6 +59,10 @@ function App() {
             <Route path="/service" >
               <Service></Service>
             </Route>
+            <Route path="/moreProducts" >
+              <MoreProducts></MoreProducts>
+            </Route>
+
             <PrivateRoute path="/manageAllOrders" >
               <ManageAllOrders></ManageAllOrders>
             </PrivateRoute>

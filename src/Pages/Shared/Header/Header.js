@@ -10,7 +10,7 @@ import { Nav } from 'react-bootstrap';
 
 
 const Header = () => {
-    const { user, logOut } = useAuth();
+    const { user, logout } = useAuth();
     return (
         <div id="nav-bar" className="sticky-top">
             <nav className="navbar navbar-expand-lg navbar-light bg-light nav-color ">
@@ -28,6 +28,9 @@ const Header = () => {
                             <li className="nav-item hover-link ">
                                 <Nav.Link as={HashLink} className="nav-link active fw-bolder hover-link text-color hover-link text-white" aria-current="page" to="/home#home">Home</Nav.Link>
                             </li>
+                            <li className="nav-item hover-link ">
+                                <Nav.Link as={HashLink} className="nav-link active fw-bolder hover-link text-color hover-link text-white" aria-current="page" to="/moreProducts">More Products</Nav.Link>
+                            </li>
                             <li className="nav-item hover-link">
                                 <Nav.Link as={HashLink} className="nav-link active  fw-bolder hover-link text-color hover-link text-white" aria-current="page" to="/manageAllOrders#manageAllOrders">Manage Orders</Nav.Link>
                             </li>
@@ -43,7 +46,7 @@ const Header = () => {
 
                             {user?.email ?
 
-                                <p className="nav-link active fs-6 fw-bolder hover-link text-warning " onClick={logOut}>Logout</p> :
+                                <p className="nav-link active fs-6 fw-bolder hover-link text-warning " onClick={logout}>Logout</p> :
 
                                 <Nav.Link as={HashLink} className="nav-link active fs-6 fw-bolder hover-link " aria-current="page" to="/login">Login</Nav.Link>}
 

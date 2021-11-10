@@ -28,7 +28,7 @@ const Services = () => {
 
             <div className=" service-container ">
                 {
-                    services.map(service => <Service
+                    (services.slice(0, 3)).map(service => <Service
                         key={service._id}
                         service={service}
                         short={service.description.slice(0.15)}
