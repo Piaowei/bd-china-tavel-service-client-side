@@ -30,6 +30,9 @@ import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AddDoctor from '../AddDoctor/AddDoctor';
 import useAuth from '../../../hooks/useAuth';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
+import AddService from '../../addService/AddService';
+import ManageAllProducts from '../ManageAllProducts/ManageAllProducts';
+import Home from '../../Home/Home/Home';
 // import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 
 const drawerWidth = 200;
@@ -38,7 +41,7 @@ function Dashboard(props) {
 	const { window } = props;
 	const [mobileOpen, setMobileOpen] = React.useState(false);
 	let { path, url } = useRouteMatch();
-	const { admin } = useAuth();
+	const { admin, logout } = useAuth();
 
 	const handleDrawerToggle = () => {
 		setMobileOpen(!mobileOpen);
@@ -48,11 +51,19 @@ function Dashboard(props) {
 		<div>
 			<Toolbar />
 			<Divider />
-			<Link to="/appointment" ><Button color="inherit">Apppointment</Button></Link>
-			<Link to={`${url}`} ><Button color="inherit">Dashboard</Button></Link>
-			{admin && <Box>
+			<Box style={{ textAlign: "start" }}>
+				<Link to="/appointment" ><Button color="inherit">Apppointment</Button></Link>
+			</Box>
+			{admin && <Box style={{ textAlign: "start" }} >
+				<Link to={`${url}`} ><Button color="inherit">Manage All Orders</Button></Link>
+				<Link to={`${url}/manageAllProducts`} ><Button color="inherit">Manage Products</Button></Link>
+				<Link to={`${url}/addservice`} ><Button color="inherit">Add a Product</Button></Link>
 				<Link to={`${url}/makeAdmin`} ><Button color="inherit">Make Admin</Button></Link>
-				<Link to={`${url}/addDoctor`} ><Button color="inherit">Add Doctor</Button></Link>
+				<Link to="/home" ><Button color="inherit">Go Back Home</Button></Link>
+				<p className="nav-link active fs-6 fw-bolder hover-link text-warning " onClick={logout}>Logout</p>
+				<br />
+
+
 			</Box>}
 			<List>
 				{['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
@@ -134,15 +145,25 @@ function Dashboard(props) {
 				<Toolbar />
 
 				<Switch>
+
 					<Route exact path={path}>
 						<DashboardHome></DashboardHome>
 					</Route>
 					<AdminRoute path={`${path}/makeAdmin`}>
 						<MakeAdmin></MakeAdmin>
 					</AdminRoute>
+					<AdminRoute path={`${path}/addservice`}>
+						<AddService></AddService>
+					</AdminRoute>
 					<AdminRoute path={`${path}/addDoctor`}>
 						<AddDoctor></AddDoctor>
 					</AdminRoute>
+					<AdminRoute path={`${path}/manageAllProducts`}>
+						<ManageAllProducts></ManageAllProducts>
+					</AdminRoute>
+					{/* <Route exact path={`${path}/home`}>
+						<Home></Home>
+					</Route> */}
 				</Switch>
 
 

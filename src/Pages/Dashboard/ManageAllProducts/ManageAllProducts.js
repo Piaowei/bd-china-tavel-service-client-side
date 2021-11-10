@@ -10,13 +10,13 @@ import Paper from '@mui/material/Paper';
 import { height } from '@mui/system';
 import Button from '@restart/ui/esm/Button';
 
-const Appointments = ({ date }) => {
+const ManageAllProducts = () => {
 	const { user } = useAuth();
 	const [appointments, setAppointments] = useState([]);
 
 	useEffect(() => {
 		// const url = `http://localhost:5000/orderItems?email=${user.email}`
-		const url = `http://localhost:5000/orderItems/${user.email}`
+		const url = `http://localhost:5000/orderItems/`
 		fetch(url)
 			.then(res => res.json())
 			.then(data => {
@@ -61,5 +61,4 @@ const Appointments = ({ date }) => {
 		</div>
 	);
 };
-
-export default Appointments;
+export default ManageAllProducts;
