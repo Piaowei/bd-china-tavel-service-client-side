@@ -40,11 +40,17 @@ const Header = () => {
                             <li className="nav-item hover-link">
                                 <Nav.Link as={HashLink} className="nav-link active fw-bolder hover-link text-color hover-link text-white" aria-current="page" to="/addservice#addService">Add a New Service</Nav.Link>
                             </li>
+                            {user?.email && <li className="nav-item hover-link">
+                                <Nav.Link as={HashLink} className="nav-link active fw-bolder hover-link text-color hover-link text-white" aria-current="page" to="/dashboard">Dashboard</Nav.Link>
+                            </li>
+
+                            }
 
                         </ul>
                         <form className="d-flex justify-content-center pt-3">
-
                             {user?.email ?
+
+
 
                                 <p className="nav-link active fs-6 fw-bolder hover-link text-warning " onClick={logout}>Logout</p> :
 

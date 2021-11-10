@@ -15,7 +15,8 @@ import Myorders from './Pages/MyOrders/Myorders';
 import MyorderDetails from './Pages/MyorderDetails/MyorderDetails';
 import Footer from './Pages/Shared/Footer/Footer';
 import Register from './Pages/Login/Register/Register';
-import MoreProducts from './Pages/MoreProducts/MoreProducts';
+import MoreProducts from './Pages/MoreProductsMain/MoreProducts/MoreProducts';
+import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 
 
 function App() {
@@ -46,7 +47,12 @@ function App() {
               <Myorders></Myorders>
             </PrivateRoute>
 
+            <PrivateRoute path="/dashboard">
+              <Dashboard />
+            </PrivateRoute>
+
             <Route path="/myorderDetails" >
+
               <MyorderDetails></MyorderDetails>
             </Route>
 
@@ -70,7 +76,8 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
-          <Footer></Footer>
+          {/* <Footer></Footer> */}
+
         </Router>
       </AuthProvider>
     </div>
